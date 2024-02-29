@@ -6,12 +6,14 @@
 
   home.stateVersion = "23.11";
 
-  imports = [ ../../packages/tmux.nix ];
+  imports = [ 
+	../../packages/tmux.nix
+	../../packages/gnome-terminal.nix
+  ];
 
   home.packages = with pkgs; [
 	# Shell
 	zsh 
-	#gnome.gnome-terminal
 
 	# Browser
 	firefox
@@ -54,13 +56,7 @@
   home.file = {
   };
 
-  #programs.gnome-terminal = {
-  #  showMenubar = false;
-  #  profile."2540f330-5171-459e-8f4e-b7517f352af1" = {
-  #  	showScrollbar = false;
-  #  	transparencyPercent = 50;
-  #  };
-  #};
+
 
   home.sessionVariables = {
     EDITOR = "nvim";
