@@ -105,6 +105,8 @@
 	systemPackages = with pkgs; [
 		# Browser
 		firefox
+		vim
+		git
 	  ];
 	variables.EDITOR = "vim";
   };
