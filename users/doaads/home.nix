@@ -26,7 +26,7 @@
 	zip unzip ripgrep xclip gnumake
 
 	# Development
-	gcc rustc cargo
+	gcc rustc cargo nodejs
 	(python3.withPackages (p: with p; [
 		pandas
 		requests
@@ -48,13 +48,17 @@
     # '')
   ];
 
-  programs.gnome-terminal = {
-	enable = true;
-  };
-
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
   home.file = {
+  };
+
+  programs.gnome-terminal = {
+	showMenubar = false;
+	profile.default = {
+		showScrollbar = false;
+		transparencyPercent = 50;
+	};
   };
 
   home.sessionVariables = {
