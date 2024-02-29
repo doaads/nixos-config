@@ -6,7 +6,7 @@
 
   home.stateVersion = "23.11";
 
-  imports = [ ./tmux.nix ];
+  imports = [ ../../packages/tmux.nix ];
 
   home.packages = with pkgs; [
 	# Shell
