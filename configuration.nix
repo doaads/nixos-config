@@ -115,6 +115,7 @@
 
   # zsh
   programs.zsh = {
+		enable = true;
     shellAliases = {
 		update = "sudo nixos-rebuild switch";
 	};
