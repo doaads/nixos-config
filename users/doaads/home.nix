@@ -7,8 +7,8 @@
   home.stateVersion = "23.11";
 
   imports = [ 
-	../../packages/tmux.nix
-	../../packages/gnome-terminal.nix
+	../../packages/tmux.nix		# tmux configuration
+	../../packages/gnome-terminal.nix	# gnome-terminal configuration
   ];
 
   home.packages = with pkgs; [
@@ -55,8 +55,6 @@
   # plain files is through 'home.file'.
   home.file = {
   };
-
-
 
   home.sessionVariables = {
     EDITOR = "nvim";

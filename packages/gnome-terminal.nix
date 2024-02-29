@@ -10,9 +10,9 @@
 	showMenubar = true;
 	profile."2540f330-5171-459e-8f4e-b7517f352af1" = {
 		default = true;
-		visibleName = "config";
+		visibleName = "Default";
 		showScrollbar = false;
-		transparencyPercent = 50;
+		audibleBell = false;
 		font = "Hack Nerd Font 12";
 		colors = {
 		palette = [
