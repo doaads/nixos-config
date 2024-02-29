@@ -13,7 +13,7 @@
 		let
 			# --- USER INFO ---------------------------------
 			userSettings = {
-				username = "doaads";
+				username = "doaads";  # CHANGE ON NEW SETUP!
 			};
 
 			lib = nixpkgs.lib;
@@ -36,13 +36,6 @@
 					modules = [ ./users/doaads/home.nix ];
 					extraSpecialArgs = {
 						inherit userSettings;
-					};
-				};
-				test = home-manager.lib.homeManagerConfiguration {
-					inherit pkgs;
-					modules = [ ./users/doaads/home.nix ];
-					extraSpecialArgs = {
-						username = "test";
 					};
 				};
 			};

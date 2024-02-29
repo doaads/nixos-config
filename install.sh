@@ -1,6 +1,5 @@
 #!/bin/sh
 
-
 if [ -f "hardware-configuration.nix" ]; then
 	echo "hardware-configuration.nix already copied"
 else
