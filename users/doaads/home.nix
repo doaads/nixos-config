@@ -26,10 +26,15 @@
 
 
 	# Utilities
-	zip unzip ripgrep xclip gnumake
+	zip unzip ripgrep xclip gnumake valgrind
 
 	# Development
-	gcc rustc cargo nodejs
+	gcc
+	rustc
+	cargo
+	nodejs
+	libclang
+	
 	(python3.withPackages (p: with p; [
 		pandas
 		requests
@@ -39,7 +44,12 @@
 	qemu
 
 	# Network
-	aircrack-ng wireshark wget networkmanager nmap
+	aircrack-ng
+	wireshark
+	wget
+	networkmanager
+	nmap
+	iperf
 
 	# Fonts
 	(nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono" "Hack" ]; })
