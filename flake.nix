@@ -27,12 +27,6 @@
 					specialArgs = {
 						inherit userSettings;
 					};
-				test = lib.nixosSystem {
-					inherit system;
-					modules = [ ./configuration.nix ];
-					specialArgs = {
-						inherit userSettings;
-					};
 				};
 			};
 
@@ -53,5 +47,6 @@
 				};
 			};
 		};
+
 
 }
