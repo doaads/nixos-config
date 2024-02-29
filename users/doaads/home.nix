@@ -10,7 +10,8 @@
 
   home.packages = with pkgs; [
 	# Shell
-	zsh gnome.gnome-terminal
+	zsh 
+	#gnome.gnome-terminal
 
 	# Browser
 	firefox
@@ -53,14 +54,13 @@
   home.file = {
   };
 
-  programs.gnome-terminal = {
-	#enable = true;
-	showMenubar = false;
-	profile."2540f330-5171-459e-8f4e-b7517f352af1" = {
-		showScrollbar = false;
-		transparencyPercent = 50;
-	};
-  };
+  #programs.gnome-terminal = {
+  #  showMenubar = false;
+  #  profile."2540f330-5171-459e-8f4e-b7517f352af1" = {
+  #  	showScrollbar = false;
+  #  	transparencyPercent = 50;
+  #  };
+  #};
 
   home.sessionVariables = {
     EDITOR = "nvim";
