@@ -91,6 +91,11 @@
     ];
   };
 
+  users.users.guest = {
+    isNormalUser = true;
+	useDefaultShell = true;
+  };
+
   # nerdfont configuration
   fonts.packages = with pkgs; [
       (nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono" "Hack" ]; })
@@ -112,7 +117,7 @@
   };
 
   # SHELL
-  programs.zsh.enable = true;
+  #programs.zsh.enable = true;
   users.defaultUserShell = pkgs.zsh;
 
   # zsh
