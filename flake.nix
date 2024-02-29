@@ -38,6 +38,13 @@
 						inherit userSettings;
 					};
 				};
+				test = home-manager.lib.homeManagerConfiguration {
+					inherit pkgs;
+					modules = [ ./users/doaads/home.nix ];
+					extraSpecialArgs = {
+						inherit userSettings;
+					};
+				};
 			};
 		};
 
