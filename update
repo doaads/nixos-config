@@ -1,0 +1,11 @@
+#!/bin/sh
+
+set -ex
+
+# update flake
+nix flake update
+
+# rebuild and switch
+#sudo nixos-rebuild switch --flake .#doaads-laptop
+
+home-manager switch --flake .
