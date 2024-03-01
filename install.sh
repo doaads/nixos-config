@@ -10,8 +10,14 @@ ln -s /etc/nixos/hardware-configuration.nix ./hardware-configuration.nix
 
 # the setup will use an existing configuration.nix file
 # if you prefer to use the preconfigured one - it is available in useconfig directory
-echo "linking existing config file"
-ln -s /etc/nixos/configuration.nix ./configuration.nix
+# if you don't want the config linked - run with -n or --no-link flag
+
+if [ "$1" = "-n" ] || [ "$1" = "--no-link" ]; then
+	echo "skipping linking of configuration.nix"
+else
+	echo "linking configuration.nix to current dir"
+	ln -s /etc/nixos/configuration.nix ./configuration.nix
+fi
 
 if command -v "home-manager" > /dev/null; then
 	echo "home-manager is already installed"

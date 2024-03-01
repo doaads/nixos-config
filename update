@@ -6,6 +6,11 @@ set -ex
 nix flake update
 
 # rebuild and switch
-#sudo nixos-rebuild switch --flake .#doaads --impure
+# if -r or --rebuild is passed, rebuild the system configuration
 
+if [ "$1" = "-r" ] || [ "$1" = "--rebuild" ]; then
+	sudo nixos-rebuild switch --flake .\#doaads --impure
+fi
+
+# switch user configuration
 home-manager switch --flake .
