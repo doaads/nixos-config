@@ -1,11 +1,17 @@
 #!/bin/sh
+# This script is used to install the nixos configuration on a new machine
+# It will link the configuration files to the current directory and install home-manager
+# sudo is required to link the configuration files
 
-if [ -f "hardware-configuration.nix" ]; then
-	echo "hardware-configuration.nix already copied"
-else
-	echo "hardware-configuration.nix not found, copying"
-	cp /etc/nixos/hardware-configuration.nix ./
-fi
+set -e
+
+echo "linking hardware-configuration.nix to current dir"
+ln -s /etc/nixos/hardware-configuration.nix ./hardware-configuration.nix
+
+# the setup will use an existing configuration.nix file
+# if you prefer to use the preconfigured one - it is available in useconfig directory
+echo "linking existing config file"
+ln -s /etc/nixos/configuration.nix ./configuration.nix
 
 if command -v "home-manager" > /dev/null; then
 	echo "home-manager is already installed"
@@ -17,5 +23,9 @@ else
 	nix-shell '<home-manager>' -A install
 fi
 
-
-./update
+echo "-----------------------------------------------------------------"
+echo "directories linked successfully"
+echo "home-manager installation complete"
+echo "-----------------------------------------------------------------"
+echo "make sure to run the update script to install the configuration"
+echo "-----------------------------------------------------------------"
