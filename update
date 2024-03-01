@@ -8,7 +8,9 @@ nix flake update
 # rebuild and switch
 # if -r or --rebuild is passed, rebuild the system configuration
 
+set +x
 if [ "$1" = "-r" ] || [ "$1" = "--rebuild" ]; then
+set -x
 	sudo nixos-rebuild switch --flake .\#doaads --impure
 fi
 
