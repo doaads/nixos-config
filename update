@@ -6,6 +6,6 @@ set -ex
 nix flake update
 
 # rebuild and switch
-sudo nixos-rebuild switch --flake .#doaads
+#sudo nixos-rebuild switch --flake .#doaads --impure
 
 home-manager switch --flake .
