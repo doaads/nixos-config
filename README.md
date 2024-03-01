@@ -19,4 +19,4 @@ home-manager switch --flake
 
 which can also be done with the ``update`` script, by providing a -r flag.
 
-As the ``configuration.nix`` is a symlink to /etc/nixos, using the update flag will update the home configuration without rebuilding the flakes, useful for personal projects
+As the ``configuration.nix`` is a symlink to /etc/nixos, using the update flag will update the home configuration without rebuilding the flakes, useful for personal projects, for users without sudo access
